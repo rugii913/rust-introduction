@@ -2,10 +2,12 @@ pub mod variable; // 참고: https://doc.rust-kr.org/ch07-00-managing-growing-pr
 pub mod scalar_data_type;
 pub mod compound_data_type;
 pub mod function;
+pub mod control_flow;
 use crate::variable::variable_ex;
 use crate::scalar_data_type::scalar_data_type_ex;
 use crate::compound_data_type::compound_data_type_ex;
 use crate::function::function_ex;
+use crate::control_flow::control_flow_ex;
 
 fn main() {
     println!("Hello, world!");
@@ -14,4 +16,5 @@ fn main() {
     scalar_data_type_ex();
     compound_data_type_ex();
     function_ex();
+    control_flow_ex();
 }

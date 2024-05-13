@@ -1,1 +1,5 @@
+# 실행 파일 관련
 /target
+
+# cargo 자체 관리
+Cargo.lock

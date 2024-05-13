@@ -1,4 +1,6 @@
-[package]
+# (manifest format) https://doc.rust-lang.org/cargo/reference/manifest.html
+# (Cargo.toml 관련 간단한 설명) https://velog.io/@keum0821/Rust-Cargo-알아보기
+[package] 
 name = "rust-introduction"
 version = "0.1.0"
 edition = "2021"

@@ -6,6 +6,7 @@ pub mod control_flow;
 pub mod ownership;
 pub mod borrowing;
 pub mod slice;
+mod struct_and_instance;
 use crate::variable::variable_ex;
 use crate::scalar_data_type::scalar_data_type_ex;
 use crate::compound_data_type::compound_data_type_ex;
@@ -14,6 +15,7 @@ use crate::control_flow::control_flow_ex;
 use crate::ownership::ownership_ex;
 use crate::borrowing::borrowing_ex;
 use crate::slice::slice_ex;
+
 // cf. namespace에 접근할 때 ::를 사용
 
 fn main() {
@@ -27,4 +29,5 @@ fn main() {
     ownership_ex();
     borrowing_ex();
     slice_ex();
+    struct_and_instance::struct_ex();
 }

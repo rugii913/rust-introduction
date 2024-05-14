@@ -11,6 +11,15 @@ struct Color(i32, i32, i32);
 struct Point(i32, i32, i32);
 
 pub fn struct_ex() {
+    // - struct 기초
+    struct_introduction();
+
+    // - struct 예제
+    print_area_of_rectangle1(); // tuple을 사용한 경우
+    print_area_of_rectangle2(); // construct를 사용한 경우
+}
+
+fn struct_introduction() {
     // - struct의 instance 만들기
     let user1 = User { // 이 user1이 어떤 scope에서 벗어나면 여기 name, email도 알아서 소유권 해제, active는 bool이라 copy로 관리되므로 해당 없음
         name: String::from("홍길동"),
@@ -76,4 +85,33 @@ fn build_user(name: String, email: String) -> User {
         email,
         active: true,
     }
+}
+
+fn print_area_of_rectangle1() {
+    let rectangle = (20, 30);
+    println!("해당 사각형의 면적은 {}", area1(rectangle));
+}
+
+fn area1(rectangle: (u32, u32)) -> u32 {
+    rectangle.0 * rectangle.1
+}
+
+fn print_area_of_rectangle2() {
+    let rectangle = Rectangle {
+        width: 20,
+        height: 30,
+    };
+    println!("해당 사각형의 면적은 {}", area2(&rectangle));
+    println!("사각형 = {:?}", rectangle); // {}만 있으면 display 용도, {:?}처럼 :?가 있으면 debug 관련 메서드를 호출함
+    dbg!(rectangle); // dbg! 매크로를 사용하면 어떤 소스 코드 문맥에서 어떤 값이 찍혔는지 확인 가능
+}
+
+#[derive(Debug)] // 컴파일러에게 전달하는 지시자 - debug할 때 알아보기 좋게 만듦
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+fn area2(rectangle: &Rectangle) -> u32 {
+    rectangle.width * rectangle.height
 }

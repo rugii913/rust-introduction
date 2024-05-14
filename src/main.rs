@@ -4,12 +4,14 @@ pub mod compound_data_type;
 pub mod function;
 pub mod control_flow;
 pub mod ownership;
+pub mod borrowing;
 use crate::variable::variable_ex;
 use crate::scalar_data_type::scalar_data_type_ex;
 use crate::compound_data_type::compound_data_type_ex;
 use crate::function::function_ex;
 use crate::control_flow::control_flow_ex;
 use crate::ownership::ownership_ex;
+use crate::borrowing::borrowing_ex;
 // cf. namespace에 접근할 때 ::를 사용
 
 fn main() {
@@ -21,4 +23,5 @@ fn main() {
     function_ex();
     control_flow_ex();
     ownership_ex();
+    borrowing_ex();
 }

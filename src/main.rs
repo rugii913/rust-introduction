@@ -8,6 +8,7 @@ pub mod borrowing;
 pub mod slice;
 mod struct_and_instance;
 mod struct_and_method;
+mod enum_and_match;
 use crate::variable::variable_ex;
 use crate::scalar_data_type::scalar_data_type_ex;
 use crate::compound_data_type::compound_data_type_ex;
@@ -31,4 +32,5 @@ fn main() {
     slice_ex();
     struct_and_instance::struct_ex();
     struct_and_method::struct_method_ex();
+    enum_and_match::enumeration_ex();
 }
